@@ -26,12 +26,12 @@ All overrides are made in Generator::InitEngineCore() inside of Generator.cpp
 
 RBObjects
 
-RBXObjectArray::Init(/*RBObjectsOffset*/, /*ChunkSize*/, /*bIsChunked*/);
+RBXObjectArray::Init
 /* Make sure only to use types which exist in the sdk (eg. uint8, uint64) */
 InitRBObjectArrayDecryption([](void* ObjPtr) -> uint8* { return reinterpret_cast<uint8*>(uint64(ObjPtr) ^ 0x8375); });
 FName::AppendString
 
-FName::Init(/*FName::AppendStringOffset*/);
+FName::Init
 ProcessEvent
 
 Off::InSDK::InitPE(/*PEIndex*/);
